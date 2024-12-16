@@ -164,6 +164,33 @@ else if (c==6)
 else if (c==7)
 {
     cout<<"p7_             "<<endl;
+    Player<char>* players[2];
+p_7<char>* B = new p_7<char>();  
+string playerXName, player2Name;
+
+cout << "Welcome to FCAI 4x4 Tic-Tac-Toe Game. :)\n";
+
+
+cout << "Enter Player X name: ";
+cin >> playerXName;
+players[0] = new p_7_player<char>(playerXName, 'X');
+
+
+cout << "Enter Player 2 name: ";
+cin >> player2Name;
+players[1] = new p_7_player<char>(player2Name, 'O');
+
+
+GameManager<char> x_o_game(B, players);
+x_o_game.run();
+
+   
+delete B;
+for (int i = 0; i < 2; ++i) {
+    delete players[i];
+}
+
+return 0;
 
 }
 else if (c==8)
